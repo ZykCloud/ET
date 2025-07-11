@@ -1,0 +1,61 @@
+productos = {'8475HD': ['HP', 15.6, '8GB', 'DD', '1T', 'Intel Core i5', 'Nvidia GTX1050'],
+ '2175HD': ['lenovo', 14, '4GB', 'SSD', '512GB', 'Intel Core i5', 'Nvidia GTX1050'],
+ 'JjfFHD': ['Asus', 14, '16GB', 'SSD', '256GB', 'Intel Core i7', 'Nvidia RTX2080Ti'],
+ 'fgdxFHD': ['HP', 15.6, '8GB', 'DD', '1T', 'Intel Core i3', 'integrada'],
+ 'GF75HD': ['Asus', 15.6, '8GB', 'DD', '1T', 'Intel Core i7', 'Nvidia GTX1050'],
+ '123FHD': ['lenovo', 14, '6GB', 'DD', '1T', 'AMD Ryzen 5', 'integrada'],
+ '342FHD': ['lenovo', 15.6, '8GB', 'DD', '1T', 'AMD Ryzen 7', 'Nvidia GTX1050'],
+ 'UWU131HD': ['Dell', 15.6, '8GB', 'DD', '1T', 'AMD Ryzen 3', 'Nvidia GTX1050'], 
+ }
+stock = {'8475HD': [400000,8],
+ '2175HD': [350000,5],
+ 'JjfFHD': [850000,7] ,
+ 'fgdxFHD': [250000,4],
+ 'GF75HD': [450000,3],
+ '123FHD': [400000,8],
+ '342FHD': [437990,5],
+ 'UWU131HD': [390000,6],
+}
+
+def stock_marca():
+    marca = input('Ingrese marca a registrar.').upper()
+    print(f' El stock de {marca} es de: {stock}')
+
+
+def busqueda_por_precio():
+    minimo = int(input('Ingrese el precio minimo'))
+    maximo = int(input('Ingrese el precio máximo'))
+    print('Los notebooks dentro de los precios que consultas son:')
+
+
+
+def actualizar_precio():
+    actualizar = input('Ingrese modelo a actualizar.')
+    nuevo = int(input('Ingrese precio nuevo.'))
+    otro = input('Desea actualizar otro precio? (s/n)').lower()
+    if otro == 's':
+        modelo = input('Ingrese modelo a actualizar')
+        return
+
+
+def main():
+        while True:
+            print('''
+*** Pybooks *** 
+1.	Stock marca. 
+2.	Búsqueda por precio. 
+3.	Actualizar precio. 
+4.	Salir. ''')
+            opc = input('Ingrese una opción')
+            if opc == '1':
+                stock_marca()
+            elif opc == '2':
+                busqueda_por_precio()
+            elif opc == '3':
+                actualizar_precio
+            elif opc == '4':
+                print('Programa finalizado.')
+                break
+            else:
+                print('Debe ingresar una opción válida!!') #Distinto a 1-4
+main()
