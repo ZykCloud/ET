@@ -18,7 +18,7 @@ stock = {'8475HD': [400000,8],
 }
 
 def stock_marca():
-    marca = input('Ingrese marca a registrar.').upper()
+    marca = input('Ingrese marca a registrar.').upper() #Mayuscula
     print(f' El stock de {marca} es de: {stock}')
 
 
